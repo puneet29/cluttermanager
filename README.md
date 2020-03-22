@@ -66,3 +66,5 @@ Clutter Manager sorts all the files inside the folders according to their respec
 - [ ] Indexing
 
 - [ ] Depth parameter
+
+- [ ] Documentation

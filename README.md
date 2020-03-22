@@ -26,6 +26,14 @@ Clutter Manager sorts all the files inside the folders according to their respec
 
 ## TODO
 
+- [x] Initial release
+
+- [x] Abstraction parameter
+
+- [ ] Undo clutter
+
+- [ ] Make a pypi package
+
 - [ ] Indexing
 
 - [ ] Depth parameter

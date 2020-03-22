@@ -23,3 +23,9 @@ Clutter Manager sorts all the files inside the folders according to their respec
     ```bash
     python3 main.py --root <path to any clumsy directory>
     ```
+
+## TODO
+
+- [ ] Indexing
+
+- [ ] Depth parameter

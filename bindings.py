@@ -62,3 +62,9 @@ extension_to_type = defaultdict(lambda: 'other')
 for type_name, extensions in filetypes.items():
     for extension in extensions:
         extension_to_type[extension] = type_name
+
+extension_to_type_abstracted = defaultdict(lambda: 'other')
+
+for type_name, extensions in abstract_types.items():
+    for extension in extensions:
+        extension_to_type_abstracted[extension] = type_name

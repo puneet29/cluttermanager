@@ -1,4 +1,4 @@
-# Python related
+# Byte Compiled
 __pycache__
 
 # VSCode related
@@ -6,3 +6,11 @@ __pycache__
 
 # Testing directory
 test
+
+# Virtual environment
+venv
+
+# Developer
+cluttermanager.egg-info
+dist
+build

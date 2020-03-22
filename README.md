@@ -9,19 +9,32 @@ Clutter Manager sorts all the files inside the folders according to their respec
 1. Clone Directory
 
     ```bash
-    git clone https://github.com/puneet29/ClutterManager.git
+    git clone https://github.com/puneet29/cluttermanager.git
     ```
 
 2. Change directory
 
     ```bash
-    cd ClutterManager
+    cd cluttermanager
     ```
 
-3. Run ClutterManager
+3. Create and activate Virtual Environment
 
     ```bash
-    python3 main.py --root <path to any clumsy directory> [--abstract <True/False>] [--undo]
+    python3 -m venv venv
+    . venv/bin/activate
+    ```
+
+4. Install cluttermanager
+
+    ```bash
+    python3 setup.py install
+    ```
+
+5. Run cluttermanager
+
+    ```bash
+    cluttermanager --root <path to any clumsy directory> [--abstract <True/False>] [--undo]
     ```
 
 ## TODO
@@ -32,7 +45,9 @@ Clutter Manager sorts all the files inside the folders according to their respec
 
 - [x] Undo clutter
 
-- [ ] Make a pypi package
+- [x] Make a PyPI package
+
+- [ ] Deploy on PyPI
 
 - [ ] Indexing
 

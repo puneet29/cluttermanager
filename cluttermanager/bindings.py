@@ -5,14 +5,15 @@ audio_files = {'aif', 'cda', 'mid', 'midi', 'mp3',
                'm4a', 'mpa', 'ogg', 'wav', 'wma', 'wpl'}
 
 compressed_files = {'7z', 'arj', 'deb',
-                    'pkg', 'rar', 'rpm', 'tar.gz', 'z', 'zip'}
+                    'pkg', 'rar', 'rpm', 'tar', 'gz', 'xz', 'tgz', 'z', 'zip'}
 
 disc_files = {'dmg', 'iso', 'toast', 'vcd'}
 
-data_db_files = {'csv', 'dat', 'db', 'dbf',
-                 'log', 'mdb', 'sav', 'sql', 'tar', 'xml'}
+data_db_files = {'csv', 'dat', 'db', 'dbf', 'json', 'pt', 'h5', 'npy', 'pkl',
+                 'hdf5', 'log', 'mdb', 'sav', 'sql', 'tar', 'xml'}
 
-email_files = {'email', 'eml', 'emix', 'msg', 'oft', 'ost', 'pst', 'vcf'}
+email_files = {'email', 'eml', 'emix',
+               'ics', 'msg', 'oft', 'ost', 'pst', 'vcf'}
 
 executable_files = {'apk', 'bat', 'bin', 'com',
                     'exe', 'gadget', 'jar', 'msi', 'wsf'}
@@ -27,7 +28,7 @@ internet_files = {'asp', 'aspx', 'cer', 'cfm', 'cgi', 'css',
 
 presentation_files = {'key', 'odp', 'pps', 'ppt', 'pptx'}
 
-programming_files = {'c', 'cpp', 'class', 'cs', 'py',
+programming_files = {'c', 'cpp', 'class', 'cs', 'py', 'ipynb', 'mat',
                      'h', 'java', 'pl', 'sh', 'swift', 'vb'}
 
 spreadsheet_files = {'ods', 'xls', 'xlsm', 'xlsx'}
@@ -36,7 +37,7 @@ system_files = {'bak', 'cab', 'cfg', 'cpl', 'cur', 'dll', 'dmp',
                 'drv', 'icns', 'ini', 'lnk', 'sys', 'tmp'}
 
 video_files = {'3g2', '3gp', 'avi', 'flv', 'h264', 'm4v', 'mkv',
-               'mov', 'mp4', 'mpg', 'mpeg', 'rm', 'swf', 'vob', 'wmv'}
+               'mov', 'mp4', 'mpg', 'mpeg', 'rm', 'srt', 'swf', 'vob', 'wmv'}
 
 word_files = {'doc', 'docx', 'md', 'odt',
               'pdf', 'rst', 'rtf', 'tex', 'txt', 'wpd'}

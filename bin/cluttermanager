@@ -37,7 +37,7 @@ class ClutterManager:
                 self.index[item] = extension_to_type_abstracted[item.split(
                     '.')[-1]]
             else:
-                self.index[item] = extension_to_type[item.split('.')[-1]]
+                self.index[item] = extension_to_type[item.split('.')[-1].lower()]
 
             dest_path = os.path.join(
                 self.root, self.index[item].capitalize(), item)

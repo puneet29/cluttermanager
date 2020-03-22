@@ -54,8 +54,9 @@ filetypes = {'audio': audio_files, 'compressed': compressed_files,
 abstract_types = {'images': image_files, 'audio': audio_files,
                   'video': video_files,
                   'programs': executable_files.union(programming_files),
-                  'documents': data_db_files.union(presentation_files).union(
+                  'documents': presentation_files.union(
                       spreadsheet_files).union(word_files),
+                  'data': data_db_files,
                   'compressed': compressed_files}
 
 extension_to_type = defaultdict(lambda: 'other')

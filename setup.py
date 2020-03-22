@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 setup(name='cluttermanager',
       long_description=long_description,
       long_description_content_type="text/markdown",
-      version='0.4.6',
+      version='0.4.7',
       description='Clutter Manager for your folders',
       author='Puneet Saini',
       author_email='puneet29saini@gmail.com',

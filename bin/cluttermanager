@@ -18,7 +18,7 @@ import sys
 from collections import defaultdict
 
 from cluttermanager.bindings import (abstract_types, extension_to_type,
-                            extension_to_type_abstracted, filetypes)
+                                     extension_to_type_abstracted, filetypes)
 
 
 class ClutterManager:
@@ -35,9 +35,10 @@ class ClutterManager:
 
             if self.abstract:
                 self.index[item] = extension_to_type_abstracted[item.split(
-                    '.')[-1]]
+                    '.')[-1].lower()]
             else:
-                self.index[item] = extension_to_type[item.split('.')[-1].lower()]
+                self.index[item] = extension_to_type[item.split(
+                    '.')[-1].lower()]
 
             dest_path = os.path.join(
                 self.root, self.index[item].capitalize(), item)

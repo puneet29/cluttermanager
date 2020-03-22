@@ -4,7 +4,8 @@ import shutil
 import sys
 from collections import defaultdict
 
-from bindings import extension_to_type, extension_to_type_abstracted
+from bindings import (abstract_types, extension_to_type,
+                      extension_to_type_abstracted, filetypes)
 
 
 class ClutterManager:
@@ -18,13 +19,16 @@ class ClutterManager:
             path = os.path.join(self.root, item)
             if os.path.isdir(path):
                 continue
+
             if self.abstract:
                 self.index[item] = extension_to_type_abstracted[item.split(
                     '.')[-1]]
             else:
                 self.index[item] = extension_to_type[item.split('.')[-1]]
+
             dest_path = os.path.join(
                 self.root, self.index[item].capitalize(), item)
+
             try:
                 if not os.path.isdir(os.path.dirname(dest_path)):
                     os.makedirs(os.path.dirname(dest_path))
@@ -36,14 +40,40 @@ class ClutterManager:
                 print('Please rename it and try again')
                 sys.exit(1)
 
+    def undo(self):
+        for item in os.listdir(self.root):
+            path = os.path.join(self.root, item)
+
+            if not os.path.isdir(path):
+                continue
+
+            if self.abstract:
+                folder_names = list(abstract_types.keys())
+            else:
+                folder_names = list(filetypes.keys())
+            folder_names.append('other')
+
+            if item.lower() in folder_names:
+                for files in os.listdir(path):
+                    shutil.move(os.path.join(path, files), self.root)
+                    print('{} -> {}'.format(os.path.join(path, files),
+                                            self.root))
+                shutil.rmtree(path)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", help="relative path to clumsy directory",
                         default=".")
     parser.add_argument("--abstract", help="abstracted folder names",
-                        default=True)
+                        default='True')
+    parser.add_argument("--undo", help="make things clumsy again",
+                        action='store_true')
     args = parser.parse_args()
 
-    sorter = ClutterManager(os.path.abspath(args.root), args.abstract)
-    sorter.sort()
+    sorter = ClutterManager(os.path.abspath(args.root),
+                            args.abstract == 'True')
+    if args.undo:
+        sorter.undo()
+    else:
+        sorter.sort()

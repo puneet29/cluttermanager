@@ -21,7 +21,7 @@ Clutter Manager sorts all the files inside the folders according to their respec
 3. Run ClutterManager
 
     ```bash
-    python3 main.py --root <path to any clumsy directory>
+    python3 main.py --root <path to any clumsy directory> --abstract <True/False> [--undo]
     ```
 
 ## TODO
@@ -30,7 +30,7 @@ Clutter Manager sorts all the files inside the folders according to their respec
 
 - [x] Abstraction parameter
 
-- [ ] Undo clutter
+- [x] Undo clutter
 
 - [ ] Make a pypi package
 

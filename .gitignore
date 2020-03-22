@@ -1,0 +1,8 @@
+# Python related
+__pycache__
+
+# VSCode related
+.vscode
+
+# Testing directory
+test

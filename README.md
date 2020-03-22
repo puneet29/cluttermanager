@@ -9,7 +9,7 @@ Clutter Manager sorts all the files inside the folders according to their respec
 1. Clone Directory
 
     ```bash
-    git clone <git repo url>
+    git clone https://github.com/puneet29/ClutterManager.git
     ```
 
 2. Change directory

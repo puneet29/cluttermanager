@@ -6,6 +6,20 @@ Clutter Manager sorts all the files inside the folders according to their respec
 
 ## Usage
 
+1. Install using PyPI
+
+    ```bash
+    pip install cluttermanager
+    ```
+
+2. Run cluttermanager
+
+    ```bash
+    cluttermanager --root <path to any clumsy directory> [--abstract <True/False>] [--undo]
+    ```
+
+## Usage [Developer]
+
 1. Clone Directory
 
     ```bash
@@ -47,7 +61,7 @@ Clutter Manager sorts all the files inside the folders according to their respec
 
 - [x] Make a PyPI package
 
-- [ ] Deploy on PyPI
+- [x] Deploy on PyPI
 
 - [ ] Indexing
 
